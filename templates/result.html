@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+        <!-- return render_template("result.html",feelsLike = data["main"]["feels_like"], temp = data["main"]["temp"] , 
+         description = data["weather"]["description"] -->
+         <link rel="stylesheet" href="{{url_for('static',filename="style.css")}}">
+</head>
+<body>
+ 
+    <section class="indexContainer">
+        <h1>Weather Of {{city}}</h1>
+        <a>{{description}} and {{temp}}C</a>
+        <a>Feels like... {{feelsLike}}C</a>
+        <form action="/weather">
+            <input placeholder=" Enter the city name" id="city" name="city"></input>
+            <button type="submit"></button>
+        </form>
+    </section>
+</body>
+</html>
